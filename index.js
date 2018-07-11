@@ -1,0 +1,1 @@
+const pieces = require("./pieces.js");
