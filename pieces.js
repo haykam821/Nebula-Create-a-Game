@@ -1,12 +1,22 @@
-class ColorSwitcher {
+class Piece {
+    constructor() {
+        this.started = Date.now();
+    }
+}
+
+class ColorSwitcher extends Piece {
+    constructor() {
+        super();
+    }
+    
     collided(player) {
         player.color = Math.floor(Math.random() * 4);
     }
 }
 
-class Rotating {
+class Rotating extends Piece {
     constructor() {
-        this.started = Date.now();
+        super();
     }
 
     getRotation() {
