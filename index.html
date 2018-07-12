@@ -7,7 +7,7 @@
 	<script src="bundle.js"></script>
 </head>
 
-<body onload="init();">
+<body>
 	<canvas style="display: none;" id="canvas"></canvas>
 	<div id="menuWrapper">
 		<h1 id="title">Cool Game!!</h1>
@@ -15,7 +15,7 @@
 			<div id="endlessMenu" class="menuBoxes">
 				<h2 class="uLine purple">Endless</h2>
 				
-				<button id="endlessButton" onclick="startGame();">START</button>
+				<button id="endlessButton">START</button>
 
 				<button id="settings" class="growButton">SETTINGS</button>
 				<div id="settingsContent" class="panel"><br>
@@ -46,54 +46,6 @@
 			</div>
 		</div>
 	</div>
-	<script>
-		function init() {
-			var buttons = document.getElementsByClassName("growButton");
-			for (var i = 0; i < buttons.length; i++) {
-				buttons[i].addEventListener("click", function() {
-					this.classList.toggle("active");
-					var panel = this.nextElementSibling;
-					if (panel.style.maxHeight){
-						panel.style.maxHeight = null;
-					} else {
-						panel.style.maxHeight = panel.scrollHeight + "px";
-					} 
-				});
-			}
-		}
-
-		function startGame() {
-			var menu = document.getElementById("menuWrapper");
-			var canvas = document.getElementById("canvas");
-			menu.classList.toggle("menuShrinkOut");
-			setTimeout(function() {
-				canvas.style.display = "block";
-				playing = true;
-			}, 450);
-		}
-
-		function endGame() {
-			var menu = document.getElementById("menuWrapper");
-			var canvas = document.getElementById("canvas");
-			canvas.style.display = "block";
-			playing = false;
-			menu.classList.toggle("menuShrinkOut");
-		}
-
-		function pauseGame() {
-			var menu = document.getElementById("menuWrapper");
-			var canvas = document.getElementById("canvas");
-			paused = !paused;
-			menu.classList.toggle("menuShrinkOut");	
-		}
-
-		document.addEventListener("keydown", function(e) {
-			e.preventDefault();
-			if (e.keyCode == 27 && playing) {
-				pauseGame();
-			}
-		});
-	</script>
 </body>
 
 </html>
