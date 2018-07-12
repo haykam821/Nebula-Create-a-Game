@@ -1,29 +1,9 @@
-::-webkit-scrollbar-track {
-	background: transparent;
-}
-
-::-webkit-scrollbar {
-	width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-	background-color: #F90;
-	background-image: -webkit-linear-gradient(45deg, (255, 255, 255, .1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%, transparent 75%, transparent);
-	border-radius: 3px;
-}
-
-html {
+body {
+	background-color: #131313;
 	padding: 0;
 	margin: 0;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	font-family: 'Ubuntu', sans-serif;
-}
-
-body {
-	background-color: #000;
+	font-family: "Ubuntu", sans-serif;
+	overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-right: -50%;
 }
 
-#endlessMenu, #challengeMenu, #aboutMenu {
+.menuBoxes {
 	background-color: #262626;
 	border-radius: 1px;	
 	box-shadow: 2px 6px 0 #191919;
@@ -61,31 +41,18 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 20px;
 	vertical-align: top;
 	box-sizing: border-box;
-}
-
-#endlessMenu {
-	width: 32%;
-	margin-bottom: 10px;
-	margin-right: 10px;
-}
-
-#challengeMenu {
-	width: 34%;
-	margin-bottom: 10px;
-	display: inline-block;
-}
-
-#aboutMenu {
-	width: 32%;
-	margin-left: 10px;
+    height: 200px;
+    width: 30%;
+    margin: 10px;
 }
 
 #title {
 	width: 100%;
 	color: #fff;
 	font-size: 96px;
-	text-align: center;
-	text-shadow: 1px 1px 0 #1c7a00, 1px 2px 0 #1c7a00, 2px 3px 0 #1c7a00, 2px 4px 0 #1c7a00, 2px 5px 0 #1c7a00, 2px 6px 0 #1c7a00;
+    text-align: center;
+    text-shadow: 5px 5px 0px gray;
+    margin-bottom: 80px;
 }
 
 #endlessMenu button {
