@@ -1,69 +1,78 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<link rel="stylesheet" href="style.css">
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-	<script src="bundle.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <script src="bundle.js"></script>
 </head>
+
 <body onload="init();">
-	<div id="menuWrapper">
-		<h1 id="title">Cool Game!!</h1>
+    <div id="menuWrapper">
+        <h1 id="title">Cool Game!!</h1>
 
-		<div id="menuBoxWrapper">
-			<div id="endlessMenu" class="menuBoxes">
-				<h2 class="uLine purple">Endless</h2>
-				
-				<button id="endlessButton">START</button>
+        <div id="menuBoxWrapper">
+            <div id="endlessMenu" class="menuBoxes">
+                <h2 class="uLine purple">Endless</h2>
 
-				<button id="settings" class="accordion">SETTINGS</button>
-				<div id="settingsContent" class="panel">
-					<strong>Ball Speed: </strong><input type="range" min="5" max="25" style="vertical-align: middle; position: relative; bottom: 1px;"></input>
-				</div>
+                <button id="endlessButton">START</button>
 
-				<button id="about" class="accordion">INFORMATION</button>
-				<div id="aboutContent" class="panel">
-				</div>
-			</div>
+                <button id="settings" class="accordion">SETTINGS</button>
+                <div id="settingsContent" class="panel">
+                    <strong>Ball Speed: </strong>
+                    <input type="range" min="5" max="25" style="vertical-align: middle; position: relative; bottom: 1px;"></input>
+                </div>
 
-			<div id="challengeMenu" class="menuBoxes">
-				<h2 class="uLine purple">Challenges</h2>
-			</div>
+                <button id="about" class="accordion">INFORMATION</button>
+                <div id="aboutContent" class="panel">
+                </div>
+            </div>
 
-			<div id="aboutMenu" class="menuBoxes">
-				<h2 class="uLine purple">About</h2>
-				<h3 class="blue">Developers:</h3>
-				<strong>JavaScript Coder: </strong>haykam#2447<br>
-				<strong>HTML/CSS Coder: </strong>Drew Snow#1286<br>
-				<strong>Offline: </strong>gnnrskl#7354<br><br>
-			</div>
-		</div>
-	</div>
-	<script>
-		var elements;
-		function init() {
-			elements = {
-				endlessStart : document.getElementById("endlessButton"),
+            <div id="challengeMenu" class="menuBoxes">
+                <h2 class="uLine purple">Challenges</h2>
+            </div>
 
-				endlessSettings : document.getElementById("settings"),
-				endlessSettingsContent : document.getElementById("settingsContent"),
+            <div id="aboutMenu" class="menuBoxes">
+                <h2 class="uLine purple">About</h2>
+                <h3 class="blue">Developers:</h3>
+                <strong>JavaScript Coder: </strong>haykam#2447
+                <br>
+                <strong>HTML/CSS Coder: </strong>Drew Snow#1286
+                <br>
+                <strong>Offline: </strong>gnnrskl#7354
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    <script>
+        let elements;
 
-				endlessInfo : document.getElementById("about"),
-				endlessInfoContent : document.getElementById("aboutContent")
-			};
+        function init() {
+            elements = {
+                endlessStart: document.getElementById("endlessButton"),
 
-			var acc = document.getElementsByClassName("accordion");
-			for (var i = 0; i < acc.length; i++) {
-				acc[i].addEventListener("click", function() {
-					this.classList.toggle("active");
-					var panel = this.nextElementSibling;
-					if (panel.style.maxHeight){
-						panel.style.maxHeight = null;
-					} else {
-						panel.style.maxHeight = panel.scrollHeight + "px";
-					} 
-				});
-			}
-		}
-	</script>
+                endlessSettings: document.getElementById("settings"),
+                endlessSettingsContent: document.getElementById("settingsContent"),
+
+                endlessInfo: document.getElementById("about"),
+                endlessInfoContent: document.getElementById("aboutContent"),
+            };
+
+            const acc = document.getElementsByClassName("accordion");
+            Array.from(acc).forEach(accordion => {
+                accordion.addEventListener("click", () => {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            });
+        }
+    </script>
 </body>
+
 </html>
