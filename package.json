@@ -1,34 +1,34 @@
 {
-	"private": true,
-	"devDependencies": {
-		"eslint": "^5.1.0",
-		"eslint-config-haykam": "^1.3.0",
-		"eslint-plugin-extra-rules": "0.0.0-development",
-		"eslint-plugin-html": "^4.0.5",
-		"eslint-plugin-json": "^1.2.0",
-		"eslint-plugin-markdown": "^1.0.0-beta.6",
-		"eslint-plugin-unicorn": "^4.0.3"
-	},
-	"description": "A game created in 21 days for Nebula's Create a Game event.",
-	"version": "1.0.0",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/haykam821/Nebula-Create-a-Game.git"
-	},
-	"keywords": [
-		"game",
-		"project",
-		"nebula",
-		"contest",
-		"event"
-	],
-	"author": "haykam821, SnowLord, gnnrskl",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/haykam821/Nebula-Create-a-Game/issues"
-	},
-	"homepage": "https://github.com/haykam821/Nebula-Create-a-Game#readme"
+    "author": "haykam821, SnowLord, gnnrskl",
+    "bugs": {
+        "url": "https://github.com/haykam821/Nebula-Create-a-Game/issues"
+    },
+    "description": "A game created in 21 days for Nebula's Create a Game event.",
+    "devDependencies": {
+        "eslint": "^5.1.0",
+        "eslint-config-haykam": "^1.3.0",
+        "eslint-plugin-extra-rules": "0.0.0-development",
+        "eslint-plugin-html": "^4.0.5",
+        "eslint-plugin-json": "^1.2.0",
+        "eslint-plugin-markdown": "^1.0.0-beta.6",
+        "eslint-plugin-unicorn": "^4.0.3"
+    },
+    "homepage": "https://github.com/haykam821/Nebula-Create-a-Game#readme",
+    "keywords": [
+        "game",
+        "project",
+        "nebula",
+        "contest",
+        "event"
+    ],
+    "license": "MIT",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/haykam821/Nebula-Create-a-Game.git"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "version": "1.0.0"
 }
