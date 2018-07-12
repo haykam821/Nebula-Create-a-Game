@@ -4,7 +4,6 @@ body {
 	margin: 0;
 	font-family: "Ubuntu", sans-serif;
 	overflow: hidden;
-	user-select: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -36,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menuShrinkOut {
-	transform: scale(0.000000000001) !important;
+	transform: scale(.000001) !important;
 }
 
 .menuBoxes {
@@ -60,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 	text-shadow: 5px 5px 0px gray;
 	margin-bottom: 80px;
+	user-select: none;
 }
 
 #endlessMenu button {
@@ -128,8 +128,6 @@ h1, h2, h3, h4, h5, h6 {
 	position: fixed;
 	z-index: -1;
 	transition: all 0.5s;
-	width: 100%;
-	height: 100%;
 	top: 0;
 	left: 0;
 	overflow: hidden;

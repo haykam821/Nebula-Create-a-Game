@@ -49,7 +49,7 @@
 					<li>Added index.html</li>
 				</ul>
 			</div>
-			
+
 			<div id="challengeMenu" class="menuBoxes">
 				<h2 class="uLine purple">Challenges</h2>
 			</div>
@@ -77,8 +77,31 @@
 			menu.classList.toggle("menuShrinkOut");
 			setTimeout(function() {
 				canvas.style.display = "block";
+				playing = true;
 			}, 450);
 		}
+
+		function endGame() {
+			var menu = document.getElementById("menuWrapper");
+			var canvas = document.getElementById("canvas");
+			canvas.style.display = "block";
+			playing = false;
+			menu.classList.toggle("menuShrinkOut");
+		}
+
+		function pauseGame() {
+			var menu = document.getElementById("menuWrapper");
+			var canvas = document.getElementById("canvas");
+			paused = !paused;
+			menu.classList.toggle("menuShrinkOut");	
+		}
+
+		document.addEventListener("keydown", function(e) {
+			e.preventDefault();
+			if (e.keyCode == 27 && playing) {
+				pauseGame();
+			}
+		});
 	</script>
 </body>
 
