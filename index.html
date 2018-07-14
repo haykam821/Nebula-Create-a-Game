@@ -5,28 +5,17 @@
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 	<script src="bundle.js"></script>
-	<script src="index.js"></script>
 </head>
 
-<body onload="init();">
+<body>
 	<canvas style="display: none;" id="canvas"></canvas>
 	<div id="menuWrapper">
 		<h1 id="title">Cool Game!!</h1>
 		<div id="menuBoxWrapper">
-			<div id="aboutMenu" class="menuBoxes">
-				<h2 class="uLine purple">About</h2>
-				<h3 class="blue">Developers:</h3>
-				<strong>JavaScript Coder: </strong>haykam#2447<br>
-				<strong>HTML/CSS Coder: </strong>Drew Snow#1286<br>
-				<strong>Canvas Expert: </strong>gnnrskl#7354<br><br>
-				<h3 class="blue">Nebula:</h3>
-				This game was made for <a style="color: #b600ff; cursor: pointer;" onclick="window.open('https://discord.gg/ZYND2Xd/');">Nebula's</a> 21 day build an arcade-style single-player web game event.
-			</div>
-
 			<div id="endlessMenu" class="menuBoxes">
 				<h2 class="uLine purple">Endless</h2>
 				
-				<button id="endlessButton" onclick="startGame();">START</button>
+				<button id="endlessButton">START</button>
 
 				<button id="settings" class="growButton">SETTINGS</button>
 				<div id="settingsContent" class="panel"><br>
@@ -44,30 +33,16 @@
 				</div>
 			</div>
 
+			<div id="aboutMenu" class="menuBoxes">
+				<h2 class="uLine purple">About</h2>
+				<h3 class="blue">Developers:</h3>
+				<strong>JavaScript Coder: </strong>haykam#2447<br>
+				<strong>HTML/CSS Coder: </strong>Drew Snow#1286<br>
+				<strong>Canvas Expert: </strong>gnnrskl#7354<br><br>
+			</div>
+
 			<div id="challengeMenu" class="menuBoxes">
 				<h2 class="uLine purple">Challenges</h2>
-				<div class="boxes">
-					<p class="unlocked">1</p>
-					<p class="locked">2</p>
-					<p class="locked">3</p>
-					<p class="locked">4</p>
-					<p class="locked">5</p>
-					<p class="locked">6</p>
-					<p class="locked">7</p>
-					<p class="locked">8</p>
-					<p class="locked">9</p>
-					<p class="locked">10</p>
-					<p class="locked">11</p>
-					<p class="locked">12</p>
-					<p class="locked">13</p>
-					<p class="locked">14</p>
-					<p class="locked">15</p>
-					<p class="locked">16</p>
-					<p class="locked">17</p>
-					<p class="locked">18</p>
-					<p class="locked">19</p>
-					<p class="locked">20</p>
-				</div>
 			</div>
 		</div>
 	</div>
